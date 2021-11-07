@@ -39,12 +39,14 @@ numeric ()
 var finalpasslist = lowercase + uppercase + numeric
 
 function genPassword() {
-for (var i = 1; i <= passwordLength.length; i++) {
-  var randomNumber = Math.floor(Math.random() * finalpasslist.length);
-  password += finalpasslist.substring(randomNumber, randomNumber +1);
- }
+for (var i = 0; i <= passwordLength.length; i++) {
+  var randomNumber = Math.floor(Math.random() * finalpasslist.length)
+    password [passwordLength.length] = finalpasslist[randomNumber]
+    i ++
+  }
 }
 
+genPassword () 
 
 
 var generateBtn = document.querySelector("#generate");
